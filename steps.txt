@@ -1,0 +1,8 @@
+1 - créer un dossier clean
+2 - npm init
+3 - npm install webpack webpack-cli
+4 - npm install axios
+5 - créer dist/index.html, qui charge le bundle main.js via une balise script
+6 - créer src/index.js avec notre source js
+7 - créer webpack.config.js default
+8 - après chaque édition, npx webpack ou mode watch 

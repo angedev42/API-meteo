@@ -1,0 +1,275 @@
+/* En-tête plein écran */
+#header {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Fond d'image via CSS */
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://puydufou.com/france/files/s3fs-public/styles/home_main_image_desktop/public/homepage/main-image/visuel_header_gladiateur-2.jpg.webp?VersionId=3oV872PgT6TdEphBO5nMcNZVd21iS_3z&itok=5SnTTiVO');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Contenu superposé */
+.overlay-content {
+  text-align: left;
+  color: white;
+}
+
+.overlay-main{
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000a1;
+    padding: 0px 20px 20px 20px;           /* marges internes haut/bas et gauche/droite */
+    border-radius: 10px;         /* coins arrondis, optionnel */
+    width: max-content;          /* s’adapte au contenu, mais garde une largeur propre */
+    max-width: 90%;              /* limite sur grands écrans */
+    box-sizing: border-box;  
+}
+
+/* Conteneur du logo */
+.logo-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 20; 
+}
+
+/* Logo */
+.logo {
+  max-width: 300px; /* Ajuster la taille du logo */
+  max-height: 200px;
+}
+
+/* Boutons */
+.menu {
+    place-self: center;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.meteo{
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  border: solid 2px;
+  border-color: #d8b568;
+  font-weight: bold;
+}
+
+.meteo:hover{
+  background-color:  #d8b568;
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0); 
+  padding: 10px 0;
+  z-index: 10; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(251, 241, 219);
+  font-size: 1.1em; /* Effet au survol */
+}
+
+/* général */
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px; 
+  font-family: "Nunito Sans", sans-serif;
+  color: #323232;
+}
+
+main{
+  max-width: 1200px;    
+  margin: 0 auto;        
+  padding: 20px;        
+  box-sizing: border-box; 
+}
+
+/* Section à fond plein */
+#zone-agenda {
+  background-color: #fffbf4;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0.5rem 0;
+  margin-top: 5%;
+}
+
+/* Contenu de la section, centré */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0; 
+  box-sizing: border-box;
+}
+
+/* Titre */
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 70px;
+  margin-bottom: 20px;
+  color:rgb(251, 241, 219);
+  z-index: 30;
+  place-self: center;
+}
+
+h2{
+    color:#000000;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 50px;
+}
+
+/* affichage météo */
+.weather-week {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.weather-day {
+  flex: 1;              
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  border : 2px;
+  border-color: #000000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: default;
+  user-select: none;
+}
+
+.day {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.icon {
+  font-size: 2rem;
+  margin: 6px 0;
+}
+
+.temps {
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.max {
+  color: #d7263d;
+  font-weight: bold;
+}
+
+.min {
+  color: #1e90ff;
+}
+
+/* cartes */
+
+#event-contener {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  border : 2px;
+  border-color: #000000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cardActivity{
+  background-color: #fff9ea;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card .card-body {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.card h5 {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+}
+
+h6{
+  font-size: 1.3rem;
+  margin: 0 auto;
+  color:#50a0dc;
+}
+
+/* activity */
+#activityContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Office du Tourisme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="background-image">
+            <div class="overlay-content">
+                <div class="logo-container">
+                    <img src="https://www.ot-lesherbiers.fr/wp-content/themes/ot-pays-des-herbiers/assets/src/images/logo.svg" alt="Logo" class="logo">
+                </div>
+                <div class="overlay-main">
+                    <h1>Office du tourisme des Herbiers</h1>
+                    <div class="menu">
+                        <a href="#"><button>Nous contacter</button></a>
+                        <a href="#"><button>Voir la météo</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <div id="navbar"></div>
+    </header>
+    <main>
+        <div id="zone-meteo" class="zone">
+            <h2>Météo des Herbiers</h2>
+            <p>Météo des 7 jours à venir </p>
+            <section id="meteo"></section>
+            <a href="https://meteofrance.com/previsions-meteo-france/les-herbiers/85500"><button class="meteo">Voir la météo complète des Herbiers</button></a>
+        </div>
+        
+        <div id="zone-agenda">
+            <div class="inner">
+                <h2>Agenda</h2>
+                <div id="event-contener">
+                    <div class="card">
+                        <img src="https://www.lesherbiers.fr/media/mille-choeurs-pour-un-regard-10.jpg" class="card-img-top" alt="identité visuelle">
+                        <div class="card-body">
+                            <h5 class="card-title">Concert des trois chorales des Herbiers</h5>
+                            <p class="card-text">Les trois chorales des Herbiers La Rose d'Or, Amis Voix et Donjon d'Ardelay, se retrouvent pour un concert en l'église Saint-Pierre.</p>
+                            <h6 class="dates">🗓️ 30 octobre</h6>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://www.cheval-daventure.com/photos/600x400/parcours-dobstacles-15434.jpg" class="card-img-top" alt="identité visuelle">
+                        <div class="card-body">
+                            <h5 class="card-title">Equitation : Jumping des Herbiers</h5>
+                            <p class="card-text">Concours de sauts d'obstacles au Parc équestre du bocage</p>
+                            <h6 class="dates">🗓️ 8 novembre 2025</h6>
+                        </div>
+                    </div>                            
+                    <div class="card">
+                        <img src="https://www.ot-lesherbiers.fr/wp-content/uploads/2024/07/Vue-moulins1-@l.langlet_OTLesHerbiers.jpg" class="card-img-top" alt="frairie de la toussaint" >
+                        <div class="card-body">
+                            <h5 class="card-title">Trail des herbiers</h5>
+                            <p class="card-text">Trail de 20km</p>
+                            <h6 class="dates">🗓️ 9 novembre</h6>
+                        </div>
+                    </div>
+                </div>       
+            </div> 
+        </div>
+
+        <div id="zone-activites">
+            <h2>Nos activités coup de coeur</h2>
+            <p>Une sélection des meilleures activités à faire au Pays des Herbiers</p>
+            <section class="filters">
+                <input type="text" id="searchInput" placeholder="Rechercher une activité...">
+                <select id="categoryFilter">
+                    <option value="all">Toutes les activités</option>
+                    <option value="culture">Activités culturelles</option>
+                    <option value="famille">Sorties en famille</option>
+                    <option value="out">Activités plein air</option>
+                </select>
+            </section>
+            <div id="activityContainer" class="activity-grid"></div>
+        </div>
+
+        <div id="zone-logement">
+            
+        </div>
+        <section id="contact-form"></section>
+    </main>
+  
+
+  <!-- LE SCRIPT GÉNÉRÉ PAR WEBPACK -->
+  <script src="bundle.js"></script>
+</body>
+</html>
+
